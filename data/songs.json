@@ -1,0 +1,11 @@
+{
+  "songs": [
+    {
+      "title": "Ejemplo - Agrega tus canciones",
+      "artist": "Instrucciones",
+      "file": "./data/songs/ejemplo.mp3",
+      "startTime": 0
+    }
+  ],
+  "_instructions": "Agrega archivos MP3 a la carpeta data/songs/ y registra cada canción aquí con title, artist, file (ruta relativa) y startTime (segundo donde inicia el fragmento)."
+}

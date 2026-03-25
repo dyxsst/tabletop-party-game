@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiesta Panameña 🇵🇦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ═══ TITLE SCREEN ═══ -->
+    <div id="screen-title" class="screen active">
+      <div class="title-bg"></div>
+      <div class="title-content">
+        <div class="title-emojis">🚌 🚕 🐸 💃 🎩 🦜 🏛️ 🚢</div>
+        <h1 class="title-main">Fiesta Panameña</h1>
+        <p class="title-sub">🎲 El juego de mesa más divertido 🎲</p>
+        <button id="btn-start" class="btn-primary btn-big">🎮 Iniciar Juego</button>
+      </div>
+    </div>
+
+    <!-- ═══ SETUP SCREEN ═══ -->
+    <div id="screen-setup" class="screen">
+      <div class="setup-container">
+        <h2 class="setup-title">Configuración del Juego</h2>
+
+        <div class="setup-section">
+          <h3>🗺️ Selecciona el Tablero</h3>
+          <div id="board-options" class="board-options"></div>
+        </div>
+
+        <div class="setup-section">
+          <h3>👥 Jugadores</h3>
+          <div id="player-slots" class="player-slots"></div>
+          <button id="btn-add-player" class="btn-secondary">+ Agregar Jugador</button>
+        </div>
+
+        <button id="btn-start-game" class="btn-primary btn-big" disabled>🚀 ¡Comenzar!</button>
+      </div>
+    </div>
+
+    <!-- ═══ BOARD SCREEN ═══ -->
+    <div id="screen-board" class="screen">
+      <div class="board-layout">
+        <!-- HUD top bar -->
+        <div id="hud" class="hud">
+          <div id="round-info" class="round-info">Ronda 1</div>
+          <div id="hud-players" class="hud-players"></div>
+        </div>
+
+        <!-- Board area -->
+        <div class="board-main">
+          <div id="board-area" class="board-area"></div>
+          <!-- Side panel -->
+          <div class="side-panel">
+            <div id="turn-info" class="turn-info">Turno de ...</div>
+            <div id="dice-display" class="dice-display" style="display:none">?</div>
+            <button id="btn-roll-dice" class="btn-primary btn-dice" style="display:none">🎲 Lanzar Dado</button>
+            <button id="btn-continue-turn" class="btn-secondary btn-continue" style="display:none">Siguiente ➡️</button>
+            <div class="star-tracker">
+              <span>⭐ Estrellas restantes:</span>
+              <span id="stars-remaining">5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlays -->
+      <div id="fork-overlay" class="overlay" style="display:none"></div>
+      <div id="star-overlay" class="overlay" style="display:none"></div>
+      <div id="event-overlay" class="overlay" style="display:none"></div>
+      <div id="coin-effect" class="overlay coin-overlay" style="display:none"></div>
+      <div id="notification" class="notification"></div>
+    </div>
+
+    <!-- ═══ MINIGAME SCREEN ═══ -->
+    <div id="screen-minigame" class="screen">
+      <div id="minigame-intro" class="minigame-section"></div>
+      <div id="minigame-container" class="minigame-section"></div>
+      <div id="minigame-result" class="minigame-section"></div>
+    </div>
+
+    <!-- ═══ AWARDS SCREEN ═══ -->
+    <div id="screen-awards" class="screen">
+      <div class="awards-container">
+        <h2 class="awards-title">🏆 Premios Especiales 🏆</h2>
+        <div id="awards-list" class="awards-list"></div>
+        <button id="btn-show-results" class="btn-primary btn-big" style="display:none">Ver Resultados Finales</button>
+      </div>
+    </div>
+
+    <!-- ═══ RESULTS SCREEN ═══ -->
+    <div id="screen-results" class="screen">
+      <div class="results-container">
+        <h2 class="results-title">🎉 ¡Fin del Juego! 🎉</h2>
+        <div id="results-list" class="results-list"></div>
+        <button id="btn-play-again" class="btn-primary btn-big">🔄 Jugar de Nuevo</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
